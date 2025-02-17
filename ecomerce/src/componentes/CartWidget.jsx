@@ -1,12 +1,18 @@
 import carritoImg from "../img/carrito.png"; 
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 function CarritoDeCompras() {
-  const numeroDeArticulos = 3;
+  const { totalQuantity } = useContext(CartContext);
   return (
-    <div>
+   
+    <Link to="/Cart">
+   <div>
       <img className="navbar-carrito" src={carritoImg} alt="Carrito de compras" />
-      <span className="numero-articulos">{numeroDeArticulos}</span>
+      { totalQuantity}
     </div>
+    </Link> 
   );
 }
 

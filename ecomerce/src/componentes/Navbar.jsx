@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import CarritoDeCompras from "./CartWidget";
 import Logo from "../img/Eco-Market.png";
 
+
 const Navbar = () => {
   return (
     <nav className="navbar">

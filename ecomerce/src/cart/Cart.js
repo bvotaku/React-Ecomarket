@@ -9,8 +9,8 @@ const Cart = () => {
   if (totalQuantity === 0) {
     return (
       <div className="titulo-carrito-container">
-        <h1 className="titulo-carrito">No hay Productos en el carrito</h1>
-        <Link className="link-carrito" to="/">Volver a la Tienda</Link>
+        <h1 className="titulo-carrito">No hay productos en el carrito</h1>
+        <Link className="link-carrito" to="/">Volver a la tienda</Link>
       </div>
     );
   }
@@ -18,8 +18,8 @@ const Cart = () => {
   return (
     <div>
       <div className="carrito-container">
-        {cart.map(p => (
-          <CartItem key={p.id} item={p} />
+        {cart.map((p) => (
+          <CartItem key={p.id} item={p} /> 
         ))}
         <h3 className="carrito-total">Total: ${total}</h3>
         <button className="carrito-boton" onClick={clear}>Vaciar carrito</button>
